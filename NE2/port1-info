@@ -1,0 +1,101 @@
+{
+    "policer": {
+        "excessBurstTolerance": 64000,
+        "excessBitRate": 100,
+        "commitedBurstTolerance": 64000,
+        "xOffThreshold": 5000,
+        "enableFlowControl": false,
+        "commitedBitRate": 100,
+        "enabled": false,
+        "enableRateCoupling": false,
+        "xOnThreshold": 6000
+    },
+    "logicalId": 1,
+    "shaper": {
+        "burstTolerance": 64000,
+        "bitRate": 100,
+        "enabled": false
+    },
+    "profiles": [],
+    "defaultProfile": {
+        "policer": {
+            "excessBurstTolerance": 64000,
+            "excessBitRate": 100,
+            "commitedBurstTolerance": 64000,
+            "commitedBitRate": 100,
+            "enabled": false,
+            "enableRateCoupling": false
+        },
+        "shaper": {
+            "burstTolerance": 64000,
+            "bitRate": 100,
+            "enabled": false
+        },
+        "dramAllocation": {
+            "mode": "AUTO",
+            "fixedSize": 3400704
+        },
+        "accumulateBurst": {
+            "mode": "MODE_N_OR_T",
+            "interBurstGap": 0.0,
+            "waitingTime": 1.0,
+            "packetNumber": 10,
+            "enabled": false
+        },
+        "reorder": {
+            "rdmSel": {
+                "dist": "PERIODIC",
+                "interval": 10,
+                "burstlen": 1,
+                "stddev": 10.0
+            },
+            "reorderByMin": 1,
+            "reorderByMax": 5,
+            "enabled": false
+        },
+        "modificationCorrection": {
+            "enableCorrection": false,
+            "enableTcp": true,
+            "enableUdp": true,
+            "enableRsvp": true,
+            "correctionMode": "ALL_PACKETS",
+            "enableIpv4": true,
+            "enablePacketCrc": true,
+            "enabled": false,
+            "modifications": []
+        },
+        "tag": "defaultProfile",
+        "packetDrop": {
+            "rdmSel": {
+                "dist": "PERIODIC",
+                "interval": 10,
+                "burstlen": 1,
+                "stddev": 10.0
+            },
+            "enabled": false
+        },
+        "ethernetDelay": {
+            "delay": 10.0,
+            "isUncorrelated": false,
+            "delayMax": 15.0,
+            "maxNegDelta": 0.1,
+            "pdvMode": "NONE",
+            "delayMin": 5.0,
+            "units": "MS",
+            "maxPosDelta": 0.1,
+            "enabled": false,
+            "spread": 1.0
+        },
+        "duplication": {
+            "duplicateCountMax": 5,
+            "rdmSel": {
+                "dist": "PERIODIC",
+                "interval": 10,
+                "burstlen": 1,
+                "stddev": 10.0
+            },
+            "enabled": false,
+            "duplicateCountMin": 1
+        }
+    }
+}

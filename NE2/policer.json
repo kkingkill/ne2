@@ -1,0 +1,15 @@
+{
+   "profiles": [
+      {
+         "tag": "Port1-Profile0",
+         "policer": {
+            "excessBurstTolerance": 64000,
+            "excessBitRate": 100,
+            "commitedBurstTolerance": 64000,
+            "commitedBitRate": 100,
+            "enabled": true,
+            "enableRateCoupling": false
+         }
+      }
+   ]
+}
